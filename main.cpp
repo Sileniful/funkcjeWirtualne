@@ -23,25 +23,40 @@ public:
     }
 };
 
+class Piggy : public Animal{
+public:
+    void animalSound(){
+    cout<<"Oink oink"<<endl;
+    }
+
+
+};
+
+
 int main()
 {
-    Animal something;
+    Animal someAnimal;
     Kitty cat;
     Doggy dog;
+    Piggy pig;
     cout<< "Some animal goes: ";
-    something.animalSound();
+    someAnimal.animalSound();
     cout<<"Kitty goes: ";
     cat.animalSound();
     cout<<"Doggy goes: ";
     dog.animalSound();
+    cout<<"Piggy goes: ";
+    pig.animalSound();
 
     Animal *pointAnimal;
     cout<<"And now again with pointers :)"<<endl;
-    pointAnimal=&something;
+    pointAnimal=&someAnimal;
     pointAnimal->animalSound();
     pointAnimal=&cat;
     pointAnimal->animalSound();
     pointAnimal=&dog;
+    pointAnimal->animalSound();
+    pointAnimal=&pig;
     pointAnimal->animalSound();
 
     return 0;
